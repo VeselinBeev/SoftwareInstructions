@@ -10,7 +10,6 @@
   </build>
   <modules>
   	<module>ProjectB</module>
-  	<module>ProjectC</module>
   	<module>ProjectD</module>
   </modules>
   <dependencies>
@@ -19,6 +18,13 @@
   	  <artifactId>junit</artifactId>
   	  <version>4.12</version>
   	 <scope>test</scope>
+  	 <exclusions>
+        <exclusion>
+          <!-- Exclude Project-C from Project-A -->
+          <groupId>com.project.c</groupId> 
+          <artifactId>ProjectC</artifactId>
+        </exclusion>
+      </exclusions>
   	</dependency>
   </dependencies>
 </project>
